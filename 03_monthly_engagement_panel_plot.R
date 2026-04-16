@@ -56,6 +56,7 @@ make_monthly_plot <- function(data, y_var, panel_title, y_label, label_y) {
       labels = paste("Month", seq_along(levels(data$Months_From_Earliest)))
     ) +
     theme(
+      plot.title = element_text(face = "plain"),
       axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
       axis.title.x = element_text(margin = margin(t = 20))
     )
@@ -67,7 +68,7 @@ df_all <- subset(df, Categories == "ALL")
 pa <- make_monthly_plot(
   data = df_all,
   y_var = "Absolute_duration_hours_monthly",
-  panel_title = "A. Absolute monthly duration (TDE)",
+  panel_title = expression(bold("a.") ~ "Absolute monthly duration (TDE)"),
   y_label = "Hours",
   label_y = 55
 )
@@ -75,7 +76,7 @@ pa <- make_monthly_plot(
 pb <- make_monthly_plot(
   data = df_all,
   y_var = "Cumulative_duration_hours_monthly",
-  panel_title = "B. Cumulative monthly duration (TDE)",
+  panel_title = expression(bold("b.") ~ "Cumulative monthly duration (TDE)"),
   y_label = "Hours",
   label_y = 310
 )
@@ -83,7 +84,7 @@ pb <- make_monthly_plot(
 pc <- make_monthly_plot(
   data = df_all,
   y_var = "absolute_freq_monthly",
-  panel_title = "C. Absolute monthly frequency (TDE)",
+  panel_title = expression(bold("c.") ~ "Absolute monthly frequency (TDE)"),
   y_label = "Frequency",
   label_y = 1
 )
@@ -91,7 +92,7 @@ pc <- make_monthly_plot(
 pd <- make_monthly_plot(
   data = df_all,
   y_var = "cumulative_freq_monthly",
-  panel_title = "D. Cumulative monthly frequency (TDE)",
+  panel_title = expression(bold("d.") ~ "Cumulative monthly frequency (TDE)"),
   y_label = "Frequency",
   label_y = 0.6
 )
@@ -102,7 +103,7 @@ df_psy <- subset(df, Categories == "Psychological_capacity")
 pe <- make_monthly_plot(
   data = df_psy,
   y_var = "Absolute_duration_hours_monthly",
-  panel_title = "E. Absolute monthly duration (PAE)",
+  panel_title = expression(bold("e.") ~ "Absolute monthly duration (PAE)"),
   y_label = "Hours",
   label_y = 30
 )
@@ -110,7 +111,7 @@ pe <- make_monthly_plot(
 pf <- make_monthly_plot(
   data = df_psy,
   y_var = "Cumulative_duration_hours_monthly",
-  panel_title = "F. Cumulative monthly duration (PAE)",
+  panel_title = expression(bold("f.") ~ "Cumulative monthly duration (PAE)"),
   y_label = "Hours",
   label_y = 200
 )
@@ -118,7 +119,7 @@ pf <- make_monthly_plot(
 pg <- make_monthly_plot(
   data = df_psy,
   y_var = "absolute_freq_monthly",
-  panel_title = "G. Absolute monthly frequency (PAE)",
+  panel_title = expression(bold("g.") ~ "Absolute monthly frequency (PAE)"),
   y_label = "Frequency",
   label_y = 0.7
 )
@@ -126,7 +127,7 @@ pg <- make_monthly_plot(
 ph <- make_monthly_plot(
   data = df_psy,
   y_var = "cumulative_freq_monthly",
-  panel_title = "H. Cumulative monthly frequency (PAE)",
+  panel_title = expression(bold("h.") ~ "Cumulative monthly frequency (PAE)"),
   y_label = "Frequency",
   label_y = 0.45
 )
@@ -137,7 +138,7 @@ df_cog <- subset(df, Categories == "Cognitive_capacity")
 pi <- make_monthly_plot(
   data = df_cog,
   y_var = "Absolute_duration_hours_monthly",
-  panel_title = "I. Absolute monthly duration (CAE)",
+  panel_title = expression(bold("i.") ~ "Absolute monthly duration (CAE)"),
   y_label = "Hours",
   label_y = 5
 )
@@ -145,7 +146,7 @@ pi <- make_monthly_plot(
 pj <- make_monthly_plot(
   data = df_cog,
   y_var = "Cumulative_duration_hours_monthly",
-  panel_title = "J. Cumulative monthly duration (CAE)",
+  panel_title = expression(bold("j.") ~ "Cumulative monthly duration (CAE)"),
   y_label = "Hours",
   label_y = 50
 )
@@ -153,7 +154,7 @@ pj <- make_monthly_plot(
 pk <- make_monthly_plot(
   data = df_cog,
   y_var = "absolute_freq_monthly",
-  panel_title = "K. Absolute monthly frequency (CAE)",
+  panel_title = expression(bold("k.") ~ "Absolute monthly frequency (CAE)"),
   y_label = "Frequency",
   label_y = 0.55
 )
@@ -161,7 +162,7 @@ pk <- make_monthly_plot(
 pl <- make_monthly_plot(
   data = df_cog,
   y_var = "cumulative_freq_monthly",
-  panel_title = "L. Cumulative monthly frequency (CAE)",
+  panel_title = expression(bold("l.") ~ "Cumulative monthly frequency (CAE)"),
   y_label = "Frequency",
   label_y = 0.35
 )
